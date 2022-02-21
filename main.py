@@ -7,8 +7,11 @@ from skyssh.scraping import ScrapingSKYSSH
 from fullssh.fullssh import fullssh
 from sshudp.sshudp import sshudp
 import telepot, time
+import telebot
 from telepot.loop import MessageLoop
 from telepot.delegate import per_chat_id, create_open, pave_event_space
+
+bot = telebot.TeleBot("5072067943:AAG9-ikQ9bZEgsDckCUmMUhct4l0rs4DQaA")
 
 
 welcome = """
