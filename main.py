@@ -7,12 +7,8 @@ from skyssh.scraping import ScrapingSKYSSH
 from fullssh.fullssh import fullssh
 from sshudp.sshudp import sshudp
 import telepot, time
-import telebot
 from telepot.loop import MessageLoop
 from telepot.delegate import per_chat_id, create_open, pave_event_space
-
-bot = telebot.TeleBot("5037876930:AAG2RyNWEW4RTihGskyolujAtU7hbx7mGMk")
-
 
 welcome = """
 =============== SSH Generator =======================
@@ -45,8 +41,8 @@ class SSHGenerator(telepot.helper.ChatHandler):
         print msg
         user_id = frm['id']
         first_name = frm['first_name'].encode('utf-8')
-        group_id = -1001104749192
-        admin_id = 286281499
+        group_id = -1001544175794
+        admin_id = 2033145618
 
         ScrapingSSHDropbear().run()
         ScrapingSKYSSH().run()
@@ -110,7 +106,7 @@ class SSHGenerator(telepot.helper.ChatHandler):
 
 
 def main():
-    bot = telepot.DelegatorBot("API_BOT",[
+    bot = telepot.DelegatorBot("5037876930:AAG2RyNWEW4RTihGskyolujAtU7hbx7mGMk",[
             pave_event_space()(
                 per_chat_id(), create_open, SSHGenerator, timeout=10
             ),
