@@ -84,7 +84,7 @@ class fullssh(object):
         browser.form['username'] = first_name+str(int(time.time()))[4:]
         browser.form['password'] = str(int(time.time()))[4:]
         browser.form['captcha'] = Captcha(self.bot).read_image(image)
-        print browser.form.attrs
+        print (browser.form.attrs)
         browser.submit()
         soup = BeautifulSoup(browser.response().get_data(), 'lxml')
         return  soup.get_text()
